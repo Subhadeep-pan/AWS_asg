@@ -6,3 +6,16 @@ proxy_set_header Host $host;
 proxy_cache_bypass $http_upgrade;
 # AWS_asg
 curl -SL https://deb.nodesource.com/setup_18.x|sudo -E bash -  
+#!/bin/bash
+get-apt update
+get-apt upgrade
+apt-get install -y nginx
+systemctl start nginx
+systemctl enable nginx
+apt-get install -y git
+curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+apt-get install -y nodejs
+git clone https://github.com/Subhadeep-pan/AWS_asg.git
+cd AWS_asg
+npm install
+node index.js
