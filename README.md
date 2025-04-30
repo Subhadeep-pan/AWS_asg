@@ -19,3 +19,4 @@ git clone https://github.com/Subhadeep-pan/AWS_asg.git
 cd AWS_asg
 npm install
 node index.js
+git remote add origin
